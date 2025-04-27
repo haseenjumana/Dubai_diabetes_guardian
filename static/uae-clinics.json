@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Dubai Diabetes Center",
+        "phone": "+971 4 219 2000",
+        "location": "Al Jaddaf, Dubai"
+    },
+    {
+        "name": "Imperial College Diabetes Centre",
+        "phone": "+971 2 496 4333",
+        "location": "Abu Dhabi"
+    },
+    {
+        "name": "Emirates Hospital Diabetes Clinic",
+        "phone": "+971 4 379 9888", 
+        "location": "Jumeirah, Dubai"
+    }
+]

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results - Diabetes Guardian UAE</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="result-header">
+            <h2>Your Diabetes Analysis Report</h2>
+            <div class="risk-meter risk-{{ category }}">
+                <div class="risk-level">{{ risk }}%</div>
+                <div class="risk-status">{{ status }}</div>
+            </div>
+        </div>
+
+        <div class="recommendations">
+            <div class="plan-card diet">
+                <h3><i class="fas fa-utensils"></i> UAE-Specific Diet Plan</h3>
+                <ul>
+                    {% for item in advice.diet %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="plan-card exercise">
+                <h3><i class="fas fa-running"></i> Activity Program</h3>
+                <p>{{ advice.exercise }}</p>
+            </div>
+
+            <div class="plan-card medical">
+                <h3><i class="fas fa-hospital"></i> Recommended Checkups</h3>
+                <p>{{ advice.checkups }}</p>
+                <div class="clinics">
+                    <h4>DHA Approved Clinics:</h4>
+                    <ul>
+                        {% for clinic in clinics %}
+                        <li>{{ clinic.name }} - {{ clinic.phone }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="emergency">
+            <i class="fas fa-phone-alt"></i> Emergency Contact: {{ emergency }}
+        </div>
+    </div>
+</body>
+</html>

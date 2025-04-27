@@ -1,0 +1,147 @@
+:root {
+    --primary: #2c786c;
+    --secondary: #ff7c03;
+    --danger: #d92027;
+    --success: #3aaf3f;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui;
+    background: #f5f7fa;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo { display: none; }
+
+.tagline {
+    color: var(--primary);
+    font-size: 1.2em;
+    margin-top: -15px;
+}
+
+.diabetes-form {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 8px rgba(44,120,108,0.2);
+}
+
+.analyze-btn {
+    background: linear-gradient(135deg, var(--primary), #004445);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+.analyze-btn:hover {
+    transform: translateY(-2px);
+}
+
+.risk-meter {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.risk-low { background: #e8f5e9; color: var(--success); }
+.risk-medium { background: #fff3e0; color: #ff9800; }
+.risk-high { background: #ffebee; color: var(--danger); }
+
+.risk-level {
+    font-size: 3.5em;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.risk-status {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.recommendations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.plan-card {
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.diet { background: #e8f5e9; border-left: 5px solid var(--success); }
+.exercise { background: #e3f2fd; border-left: 5px solid #2196f3; }
+.medical { background: #fce4ec; border-left: 5px solid #d81b60; }
+
+.plan-card h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.emergency {
+    background: var(--danger);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fa-info-circle {
+    color: var(--secondary);
+    margin-left: 5px;
+    cursor: help;
+}
