@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 import tensorflow as tf
 import numpy as np
 import json
+import os
 import uvicorn
 
 
@@ -79,4 +80,5 @@ async def analyze(request: Request,
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000)) 
     uvicorn.run("Diabetes_Guardian_UAE:app", host="0.0.0.0", port=8000)
